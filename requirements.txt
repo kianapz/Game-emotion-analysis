@@ -1,0 +1,7 @@
+praw
+tweepy
+google-api-python-client
+beautifulsoup4
+requests
+pandas
+nltk
