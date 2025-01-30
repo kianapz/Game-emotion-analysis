@@ -12,6 +12,8 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 import os
 from dotenv import load_dotenv
+import re
+
 
 # ========== 🎮 LIST OF GAMES BY GENRE ==========
 games = {
@@ -40,6 +42,19 @@ TWITTER = {
 }
 
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
+
+
+def sanitize_filename(game_name):
+    """
+    Removes or replaces invalid characters from game names 
+    to create a safe filename.
+    """
+    game_name = game_name.strip()  # Remove leading/trailing spaces
+    game_name = re.sub(r'[<>:"/\\|?*]', '', game_name)  # Remove invalid characters
+    game_name = re.sub(r'\s+', '_', game_name)  # Replace spaces with underscores
+    game_name = re.sub(r"'", "", game_name)  # Remove apostrophes
+    return game_name
+
 
 # ========== ✅ API VALIDATION ==========
 def is_valid_reddit():
@@ -92,9 +107,13 @@ def scrape_reddit(game):
             post.comments.replace_more(limit=5)
             for comment in post.comments.list():
                 comments_data.append([post.title, post.score, comment.body, comment.score])
-
+        
+        
         df = pd.DataFrame(comments_data, columns=["Post Title", "Post Score", "Comment", "Comment Score"])
-        df.to_csv(f"data/{game}_reddit.csv", index=False)
+
+
+        safe_name = sanitize_filename(game)
+        df.to_csv(f"data/{safe_name}_reddit.csv", index=False)
         print(f"✅ Reddit data for {game} saved!")
     except Exception as e:
         print(f"❌ Error scraping Reddit for {game}: {e}")
@@ -113,7 +132,9 @@ def scrape_twitter(game):
         tweet_data = [[tweet.user.screen_name, tweet.full_text, tweet.created_at, tweet.favorite_count, tweet.retweet_count] for tweet in tweets]
 
         df = pd.DataFrame(tweet_data, columns=["Username", "Tweet", "Date", "Likes", "Retweets"])
-        df.to_csv(f"data/{game}_twitter.csv", index=False)
+
+        safe_name = sanitize_filename(game)
+        df.to_csv(f"data/{safe_name}_twitter.csv", index=False)
         print(f"✅ Twitter data for {game} saved!")
     except Exception as e:
         print(f"❌ Error scraping Twitter for {game}: {e}")
@@ -141,7 +162,8 @@ def scrape_youtube(game):
                      item["snippet"]["topLevelComment"]["snippet"]["likeCount"]] for item in response["items"]]
 
         df = pd.DataFrame(comments, columns=["Author", "Comment", "Likes"])
-        df.to_csv(f"data/{game}_youtube.csv", index=False)
+        safe_name = sanitize_filename(game)
+        df.to_csv(f"data/{safe_name}_youtube.csv", index=False)
         print(f"✅ YouTube data for {game} saved!")
     except Exception as e:
         print(f"❌ Error scraping YouTube for {game}: {e}")
@@ -176,12 +198,21 @@ def scrape_steam(game, app_id, num_reviews=500):
     all_reviews = all_reviews[:num_reviews]
 
     df = pd.DataFrame(all_reviews, columns=["Review", "Positive", "Helpful Votes", "Funny Votes"])
-    df.to_csv(f"data/{game}_steam.csv", index=False)
+    safe_name = sanitize_filename(game)
+    df.to_csv(f"data/{safe_name}_steam.csv", index=False)
     print(f"✅ Steam reviews for {game} ({len(all_reviews)} total) saved!")
 
 
 
 
+
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys  # ✅ Import Keys
+from webdriver_manager.chrome import ChromeDriverManager
+import pandas as pd
+import time
 
 def scrape_metacritic(game):
     formatted_game = game.lower().replace(" ", "-")
@@ -199,8 +230,8 @@ def scrape_metacritic(game):
         driver.get(url)
         time.sleep(5)  # Wait for JavaScript content to load
 
-        # Scroll down to load more reviews
-        for _ in range(5):  # Scroll 5 times
+        # ✅ Scroll down to load more reviews (Fixed)
+        for _ in range(5):  
             driver.find_element(By.TAG_NAME, "body").send_keys(Keys.END)
             time.sleep(2)
 
@@ -224,7 +255,8 @@ def scrape_metacritic(game):
         # Save to CSV if reviews exist
         if reviews:
             df = pd.DataFrame(reviews, columns=["Review"])
-            df.to_csv(f"data/{game}_metacritic.csv", index=False)
+            safe_name = sanitize_filename(game)  # ✅ Ensure safe filename
+            df.to_csv(f"data/{safe_name}_metacritic.csv", index=False)
             print(f"✅ Metacritic reviews for {game} saved!")
         else:
             print(f"⚠️ No Metacritic reviews found for {game}.")
@@ -232,6 +264,7 @@ def scrape_metacritic(game):
     except Exception as e:
         print(f"❌ Error scraping Metacritic for {game}: {e}")
         driver.quit()
+
 # ========== 🚀 RUNNING SCRAPER FOR EACH GAME ==========
 def run_scraper():
     steam_ids = {
@@ -251,7 +284,7 @@ def run_scraper():
         for game in game_list:
             print(f"\n📌 Scraping data for: {game} ({genre})...") 
             scrape_reddit(game) 
-            scrape_twitter(game) 
+            #scrape_twitter(game) 
             scrape_youtube(game) 
             if steam_ids.get(game):
                 scrape_steam(game, steam_ids[game])
