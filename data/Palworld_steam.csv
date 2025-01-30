@@ -1,43 +1,139 @@
 Review,Positive,Helpful Votes,Funny Votes
+"if Nintendo are suing Pocketpair for actually making a quality game that improves on every aspect that pokemon cant with the same recycled unfinished trash
+
+Then these devs have done something right and their game needs all the attention and money they can get",True,514,9
 "Bought this solely to support their fight against Nintendo.
 
 It's a decent game though, It's like ARK but actually fun combat and more in depth creatures.
-",True,126,5
-"if Nintendo are suing Pocketpair for actually making a quality game that improves on every aspect that pokemon cant with the same recycled unfinished trash
+",True,525,22
+"The start of this game is so good. I played together with a friend and had a blast the first 30 levels or so. But man does the pacing get ruined in mid game.
+The fun I got from playing Palworld was mainly from exploring the world, finding and catching new pals and collecting collectibles. But when you enter mid game, which is around level 30 you can't progress by simply exploring anymore. You instead need to farm materials to craft necessary items and farm the same pals you've already caught to gain exp. And this loop of farming and running around can go on for hours.
+Me and my friend changed the world settings (higher drops etc) to make it more bearable but even so the game was too boring for me to want to continue. And it's so frustrating because the beginning of the game was so much fun and I wish the developers would've designed the game progression to be like that through out the whole game.
+There's more stuff I could criticize the game for but what's written above is the main complaint I have and what made me stop playing.",False,109,20
+"It's good, not great. It's a monster party game, you run around and catch your monsters, etc. But you only have a party of five and there are always going to be utility slots taken up for your personal movement and the like. Each pal can only actively have three moves slotted in, too, and given it's all real time it runs on cool downs instead - which is horrible if your pal whiffs and now everyone is twiddling their thumbs. Part of this is covered up by some pals being mountable, so you can fight as them, and then you yourself can have a weapon and run around. Except just you shooting most things is a lot more consistent, DPS-wise, as you don't have a cooldown even if you do less damage, so at some point once you're established the game becomes flying in on a bird, shotgunning a deer in the face before throwing a legally distinct pokeball at them and flying off again. Which is entertaining, but also pretty much the entire gameplay loop so things start to get stale. And you kinda have to do it, too, as everything is level-gated in a surprisingly stifling way.
 
-Then these devs have done something right and their game needs all the attention and money they can get",True,73,1
-"good game plenty of playtime just with a single playthrough, big map to explore, better with friends, the base building stuff needs to be fixed a little bit but is still very good, the update added lots of stuff to do and explore, i definitely got my moneys worth since this game is priced fairly.",True,1,0
-"A great and fun game which at times makes me surprised that it's still in early access. However, there are some minor bugs that need to be addressed by the devs",True,3,0
-It's a very fun game. With randomized mode makes the game more challenging. I hope one day we get some cross play action. My only issue are the random bugs and crashes with the new update. Even with that the game is still fun,True,2,0
+But! It's also a thirty dollar game, so it being good, not great, is perfectly fine. Pal with your buds. It has jank, but nothing show stopping.",True,11,3
+"I have played this game since the release of early access, this is an amazing game. I had great experience with this game so far. Yes, it has issues, especially end game, but overall it has more pros than cons for this price range. So far devs addressed many game breaking issues and keep improving the base game while adding new content. I recommend everyone giving a try, it is more fun with friends if you can afford to host your own dedicated server. I don't like how public ones are handled though, I don't recommend them.
+ 
+",True,4,0
+"Great game to chill and catch a lot of nice creatures. Even with all the current content, the game is still in early access",True,2,0
+good survival game with good gameplay and graphics. love it ...,True,5,0
+"Great Idea, Disappointing Execution
+The concept behind Palworld is absolutely brilliant. It’s what many players have been wishing for: a blend of Pokémon, survival gameplay, and sandbox adventure. For players who aren’t too concerned about technical details and just want to enjoy the gameplay, I can still recommend this game. It has its moments and can be fun if you’re not looking too closely at its flaws.
+
+However, as a software developer and hobbyist game designer with experience in UE5, I find it hard to overlook the many issues that hold this game back. These problems might not bother everyone, but from my perspective, they significantly detract from the overall experience.
+
+I understand that my negative opinion might not be popular, I've never been a popular person anyway xD, but this is the perspective of someone who knows the tools and workflows of UE5. And from that standpoint, Palworld feels like a missed opportunity.
+After spending considerable time with the game, here are the key issues I’ve noticed:
+
+1. The AI: Broken and Frustrating
+The AI in Palworld is poorly implemented. NPCs and Pals often run into obstacles, get stuck, or act illogically. The pathfinding feels almost non-existent, which repeatedly breaks immersion. This is particularly noticeable during combat, where enemies frequently get stuck against walls or fail to navigate properly. As a result, the battles feel clunky and unengaging, making them more frustrating than fun.
+As someone with experience in AI development, I can confidently say this level of AI is unacceptable, especially when using modern tools like UE5.
+
+2. The World: Generic and Empty
+The game world feels lifeless and unfinished. Large, empty areas are filled with randomly scattered objects and items, while Pals roam aimlessly without any sense of purpose. With UE’s free assets (like Megascan), and the PCG Framework (Or Voxel), it would be possible to create a richer, more immersive world in just one day. Unfortunately, Palworld feels like it lacks the thoughtful design and detail needed to bring its world to life.
+
+3. Animations: Clunky and Outdated
+The animations are incredibly awkward. UE provides so many tools and features that can simplify and improve animation workflows, even for small teams. It’s baffling that a game built on this engine can deliver such unpolished animations. With proper budgeting and time, this could, and should, have been far better.
+
+4. The Building System: Low Budget
+The building system in Palworld feels incredibly low effort. It reminds me a lot of the Player Building System package available on the UE marketplace (https://www.fab.com/listings/c3806e8d-1903-47b3-97c2-378f279c399b), which was free for a time. While this package is functional, it’s clearly a template designed for prototyping rather than a polished feature for a full release.
+
+5. Visual Style: Inconsistent and Disjointed
+While graphics aren’t the most important aspect of a game, they do play a major role in immersion. In Palworld, the cartoony Pals and NPCs clash heavily with the semi realistic environment. On top of that, the Pals appear almost placeholder like with their low-poly style. A consistent low-poly aesthetic for the entire game might have worked better than this mismatched ""Frankenstein"" style. Additionally, the game’s LOD settings are strange and contribute further to the visual inconsistency.
+
+6. Technology: Unreal Engine Not Fully Utilized
+UE is one of the most powerful tools available to developers, offering countless features to make development easier and more efficient. Yet Palworld feels like a game that barely scratches the surface of what this engine can do. It comes across as unfinished, as though the developers either didn’t have enough time or didn’t fully leverage the tools at their disposal.
+
+Final Thoughts: Great Potential, But Little Substance
+I really wanted to like this game. The idea is fantastic, but the execution left me disappointed. I found myself constantly thinking, “This could have been done so much better!”.
+
+I might even spend my next vacation creating a Palworld clone to demonstrate how some of these issues could be addressed. With the power of UE5, there’s no reason this game couldn’t have been much more polished.",False,8,0
+"TLDR; Its ark, but actually functional and fun.
+
+Jokes aside, this is a really good game from an indie studio. Although people say its a ripoff of pokemon, its honestly closer to survival / base building games like ark. And it outshines both in those aspects, doing more than either have done in the last few years.",True,2,0
+"Nintendo can suck it, this game is everything you wish Pokemon would do, and more. Stop buying Nintendo's regurgitated garbage. Don't let Nintendo con you in to a ""new"" game, and then never update or give you anything new. I'm so sick of Nintendo releasing a ""new"" game just to abandon it and make an other ""new"" game at the same expensive price. Palworld has Updates and new content. Stop giving money to these mega corps that don't give a shit about you or their game.",True,3,0
+"It's base building and combat with cutsey allies.  You are sure to get at least a week of so enjoyment out of it.  There are some mechanics that are annoying like the weight and temperature mechanics, but these don't detract much from the game.  The base building is satisfyingly rapid and strategic and there are a number of decorative options for people interested in that.  I will say for those hoping to do multiplayer, that the multiplayer is very basic.  You have to either give other players a code each time you start up, play on public servers, or run your own server.  Emotes are also almost nonexistent.   Still, I'm sure things will improve and you can still make it happen with your buddies!  I recommend to all strategy and fps fans!",True,1,0
+"The animations are cute, and the gameplay loop is enjoyable.  They have game settings right from the start that let you minimize the grinding you have to do, which was a blessing, and you can change them any time you start up that save, which is even better.  I would not allow young children to play it, though.  Pokemon is cutesy and tee hee they just fainted.  Palworld takes rocket launchers to people and pals alike, and has a lot more adult content.  Nothing graphic, but the concepts behind some of this stuff aren't what I'd put in front of kids if you have any who might want to watch you play.
+
+If you don't want to breed super powerful pals, you aren't going to be able to interact much with the higher end content/raid bosses, which is a negative for people who don't have time to actively sit there and breed 116 of the same pal to cram into the one they want to upgrade.
+
+Overall I enjoy the game, but it IS in early access still, and there are a lot of bugs related to the pal AI.  They put out updates fairly regularly, but it is still annoying to have things spawn in odd places and slowly starve into insanity without you knowing,",True,1,0
+"my wife makes me host a dedicated server, bought me this game, and then makes me AFK on the base all day to make the pals work harder, she says I have to give 10/10.",True,4,3
+"Even with the extreme amount of hype for this game, it still exceeds my expectations.
+Realistically, this game is VERY upfront with how it works. You can buy it, try it, and if you don’t like the basic gameplay loop, you will not like the rest of the game.
+
+[b]Main aspects[/b]
+The world is huge.
+The base building is complex and enjoyable.
+The pals and you each fight on their own, but you can ride/control pals if you want.
+The combat is extremely fun, and far doesn’t get old at all.
+The AI is pretty terrible, but the game is still EA. Even if it didn’t get fixed, this wouldn’t be “that” bad that it’s a deal breaker (to me).
+There are some minor bugs, but people get way too bent out of shape over them.
+The exploration for the game is amazing. There are legitimate rewards that make you want to look in every nook and cranny. So far, this is probably my favorite part of the game. Also, Lifmunk Effigies are honestly so much fun to hunt for.
+
+[b]Something else they got right.[/b]
+It's like each decision they made, they thought to themselves, ""what would be most fun to play?""
+This seems obvious, but other games usually lack this. For example, ARK's base creation takes TONS of resources, even just for walls. You then have to place the wall, then sit there hammering it. Building a simple house can take FOREVER. Palworld sees the good of this approach, and removes the monotony of it, so it’s cheap and immediate.
+When you destroy something, it gives you ALL the resources back, so you can experiment with your base without feeling like you’re wasting resources.
+When you build, the game accessing ALL inventory within the base to use as resources, so you don’t have to keep going back and forth between storage.
+You can ride Pals very early on, and even fly very early on, rather than waiting the whole game for it.
+There’s just a lot of things in the game where it really feels like the devs chosen enjoyment over other unimportant things like realism or grind. They just wanted to make a fun game, and they succeeded.
+
+[b]The bad stuff[/b]
+You’ll see people complaining about bugs… people do that all the time about everything. From my experience there are very few bugs. I have clipped under the ground on a few occasions, but I’ve been able to remedy it fairly easily. That said, I’ve turned off drops on death, not to make the game easier, but because I don’t want to lose everything just because of a terrain bug (this almost happened just a while ago). That said, gear actually isn’t that hard to make, so it’s not even that big of a deal.
+I believe there might be some multiplayer bugs for servers, but I also see them trying to fix these in their news reports.
+The game doesn’t really have any story or anything, which is kinda lame at times. It’s completely open, and the only thing to guide you are little quests in the top that are basically irrelevant and you could completely ignore. After a while all they are, are “go here and kill this thing”. They have cool looking anime characters that are full of potential, but they do absolutely nothing with them, lol. There’s no story, no character development at all, they don’t talk, there’s no story. That said, the game is going in such a good direction, that I actually don’t want them to waste valuable dev time expanding the story/character elements, but it would be nice.
+The game doesn’t hold your hand at all, so sometimes you pretty much need to look stuff up online. For example, I’m really trying not to just follow online guides, so at the moment I have no idea where to get quartz in the world, except from this one boss battle. I really need quartz, and I’ve explored far and wide and can’t find it, so I’ll probably have to break down and Google it.
+Pal rarity should be more interesting. It’s basically just location, and then day/night cycle. Nothing is actually “rare” in this sense, and you don’t feel like you need to hunt them. There should be an element of having to hunt, and find them, but that’s missing from the game. Perhaps I’m just being too picky here though.
+
+[b]Is it a rip-off?[/b]
+Note, this is not a rip-off of Pokémon. It is also not ""Pokémon with guns"". This is essentially a rip-off of ARK, with Pokémonish creatures instead of dinosaurs. If you didn't like ARK, you will not like this game.
+Personally, I don't care if it's extremely similar to ARK. Basically every game that comes out is similar to something else; there's no way around this. Did they copy some Pokémon ideas? Almost certainly yes, however, there's like a thousand Pokémon, so it's kind of hard ""not"" to at this point (there's a literal bag of trash Pokémon after all).
+The whole court case thing is actually a massive problem for the gaming industry. Regardless of what you think of Palworld stealing from Pokémon, if Nintendo proves that you can patent just about anything, and stop other developers from making enjoyable games, this will create a monopoly situation. This will hurt video game development for decades to come. Another good example of this is how Shadow or Mordor/War created the amazing nemesis system, but now NO ONE is ever allowed to ever have this in their game, with it being literally decades until people are allowed to again. This ruins creativity and possibilities for game devs. I understand wanting to protect your intellectual property, but we’ve gone way past that in this case. Game devs should be allowed to do what they want, use whatever ideas they want, to make the game they want to make (aside from just flat out stealing code).
+
+[b]Should I buy?[/b]
+This is quickly becoming one of my favorite games ever. That said, it is an open world survival type game. If you don’t like that, then you won’t like this. This is not at all similar to the Pokémon games’ gameplay, so keep that in mind. There’s a lot of base building/management to do if you want to succeed. But, if you like that, then this is an absolute must have game.",True,1,0
+"[h1]Palworld – Cute Pals, Questionable Ethics, and Total Mayhem[/h1]
+
+""Palworld"" is like Pokémon took a detour through a dystopian survival game and came out with a serious case of dark humor. You collect adorable Pals, but things go off the rails fast when you realize those fluffy friends can be used for everything—from running your sweatshop to acting as your personal meat shield in battle. Oh, and anything inside a Pal Ball? Yeah, technically a ""Pal,"" even humans. Let the chaos begin. 😈🎯
+
+[h2]Pros:[/h2]
+
+Pals are adorable... until you start using them as mobile power plants or cannon fodder. 🐾🔫
+A wild variety of gameplay: farming, fighting, factory work, or just casually shooting at your own Pals for fun. 🌾💼💥
+Dark humor everywhere—like when you realize you can “accidentally” shoot a Pal (or a ""Pal"" that's suspiciously human) and still sleep at night. 🤷‍♂️😬
+I’m having an absolute blast with all the chaos. It’s weird, wild, and totally addictive! 🎉🔥
+
+[h2]Cons:[/h2]
+
+Sometimes it’s hard to keep track of all the mayhem. Is that a farm or a battlefield? Who knows anymore. 😵‍💫
+
+
+If you love cute creatures, dark humor, and the occasional ""oops, I just shot my Pal,"" then ""Palworld"" is the game for you. It’s not just about collecting Pals—it’s about seeing how far you can push the moral envelope while laughing at the absurdity. I’m having way too much fun with it. 😏💣",True,5,2
+"Great Game and fun to play with a decent leaning curve
+",True,1,0
+"Character Data Gone
+So me and other people i play with have had our character data randomly be corrupted/deleted and the next time we log in we have to make a new character, all our stuff is gone, and basically start fresh",False,3,0
+"good game plenty of playtime just with a single playthrough, big map to explore, better with friends, the base building stuff needs to be fixed a little bit but is still very good, the update added lots of stuff to do and explore, i definitely got my moneys worth since this game is priced fairly.",True,2,0
 "ARK: Survival Evolved Pokemon Zelda breath of the wild?!? A endless adventure awaits traveller. Welcome to the world of Pal's you will earn a lot of friendship good memory what more could you ask? My review for real now a game where you adventure the world of a mysterious creature called pal's and where you survive build do whatever you want with you Pal's!
 ",True,1,0
-"This is a great game!  Worth giving it a try, cute monsters and nice base building / survival aspects.
-My biggest complaint would be there isn't a way to build a ""poke center"" type building to heal my monsters to full without needing to just put them back into the pc.",True,1,0
-"Great game, wish they bring back the ball throw to release pals.  Also fuck nintendo",True,1,0
-"This is what pokemon should have been. Nintendo needs to take some notes and listen to fans the way pocket pair is. I love the base building, combat, leveling, and that you can utilize the pals in so many ways. And with the new update. So excited.",True,1,0
+"The game deletes your character data basically weekly at this point. Get to level 57/60? Well, get ready to never reach level 60 because their servers are unstable and the game is poorly executed. Most likely uninstalling for good. The developers clearly don't give a crap or they would fix the problem much faster. I'd be fired from my programming job if I did it so poorly, not sure how stuff like this even happens, you're better off just not adding anything to the game, at least it was playable then. Do better, you guys suck at your jobs.",False,9,3
+"It's been a year and the game is no more polished than it was when it first blew up. The devs are intent on adding new content and that's nice, but it's at the expense of polishing off existing content, mechanics, and visuals.",False,8,1
+"A great and fun game which at times makes me surprised that it's still in early access. However, there are some minor bugs that need to be addressed by the devs",True,3,0
 "This game get compared to Pokemon allot but in all honestly I would compare more to ARK. 
 Personally I would choose to play this over ARK. ARK is more hard core and less buggy but this game is just more fun. 
 
 Some people have a very big problem with some monsters taking inspiration from Pokemon, sometimes heavy inspiration. But I think its like saying Agumon and Charmander are too similar and Digimon is a rip off of Pokemon, which was said back in the day. The Monster Collector Genre should have more competition in it to explore what can be done in it.",True,3,0
-"Gud Game. If you like catching MONSTERS in balls and putting them in you [strike] POCKET [/strike] pouches, give this a try. If you also like guns and rocket launchers, this game is a must buy!",True,1,0
-Its a really cute game. Please keep working on it and dont abandon it,True,1,0
+It's a very fun game. With randomized mode makes the game more challenging. I hope one day we get some cross play action. My only issue are the random bugs and crashes with the new update. Even with that the game is still fun,True,2,0
 "Every time you play this, a Nintendo Corpo steps on a [strike]Lego[/strike] N&B Block. 10/10",True,1,0
-"SO addictive omg , tho its awfull with big saves and can be buggy SOMETIMES. its SO good so far tho 1000000/10 would recomend!",True,1,0
 Its what pokemon should have been years ago (minus the guns and murder of course). Being able to explore the world along side your pals each with their own specializations and abilities is what pokemon has been needing for years.,True,1,0
-"its just a pokemon game but you can catch people in pokeballs, eat your pokemons, make your pokemons work untill they die. You can give a minigun to your pokemon, breed your pokemons, build a base where pokemons are workers AND MUCH MORE!",True,3,0
+"I really should not have bought this game... because I have now put 134+ hours into it, and I've had it maybe a month?  It's addictive, and if you loved ark, there are so many things that seem very familiar, and the pals are just too cute!!! The bosses are fun, the bonuses you get from catching multiples of the same pals helps you level, and encourages you to also go out and hunt them, seeing more of the make, the flying pals are fantastic, the overall game is just great!  I think the only thing I would change, to make this better, would be a tonic or something that would allow for a reset of the technology point tree, because I grabbed a lot of skills that I didn't actually need/don't need near end game, but have so little points to spend, that it's a struggle.  That's just a nitpick though, because it is truly an enjoyable game!",True,4,0
+"SO addictive omg , tho its awfull with big saves and can be buggy SOMETIMES. its SO good so far tho 1000000/10 would recomend!",True,1,0
 I love this game. Heck I even adore it too! It scratched an itch that Ninten-don't. I def recommend it to anyone to just give it a try!,True,1,0
-"The game somehow scratches the both the base building and the creature collecting itch, and they work so well together. You have the incentive to get a decent Pal for battling and also for base optimising, it's great.
-
-Oh and by the way, fuck Nintendo and this lawsuit",True,2,0
-Just to support this game. You will not regret to buy this game unless we lost the fight and the game will be shut down permanently. We will see,True,3,0
-Big ups to the developers for continuing to release updates and push new content when many others in similar positions would have already started releasing paid DLC. This is a rare example of early access done right.,True,3,0
-"I do really enjoy my in-game expeditions for materials or Pals and my base building.
-Palworld is the magic that happens when a company sits on it's IP for too long, afraid to innovate.
-Neentend0 got away with their pal~mon games for way too long,
-Now they just sue the competition because you AIM the ball to initiate battle. Next move should be changing the ball to a cube or something.
-The developer Pocketpair will have all my support.",True,2,1
-so fun !!!!!!!!!!!! if you love pokemon or minecraft (both) you will adore palworld!! worth the money have fun hope you love it to,True,1,0
-"Great game, totally addictive. Beautiful scenery, fun adventure, great bosses and pals are so fun to catch.",True,1,0
+Real fun but I wish we would get better optimisation for the Steam Deck.,True,1,0
+"Fun, addictive, time-consuming. 
+At its surface, Palworld is simple and easy to get into. To actually succeed at later levels, it requires a great deal of team optimization. If you are into that kind of thing, this is for you. The breeding system is very Pokémon-like, and mastering it (and spending the time it takes) is necessary at later levels.",True,1,0
 "This game is really fun, it mixes both my partners and Is preference for games which is really nice as that means it doesnt burn us out as easily as others.
 
 While he prefers more automation and fighting, I prefer exploration and looking at cute things (lol) and this game very lovingly has both and MORE!
@@ -49,8 +145,6 @@ Also fuck Nintendo.
 "At first, when I saw this game on the steam marketplace 6 months ago, I was angry that they obviously copied from pokemon. Then... I played the game and found it to be a fantastic blend of many games I enjoy, including pokemon, a little elden ring (map scale, geography), a little minecraft, a little monster hunter, and it really is a great game that stands on its own -- MOSTLY. 
 
 I dont think the pokemon company should be suing this dev any more than From Soft should sue every ""soulslike"" game dev, or Blizzard should sue every Warcraft/Starcraft clone (RTS games in general). I support Palworld!!",True,1,0
-"I actually really like this game, not like PokeMon at all. Its more like Ark, but actually better since it isn't stupid grindy. It actually has some automation. I do wish yall released the game at 1.0 because content did run out fast, (around 30 hrs playtime) but it was interesting.",True,2,0
-"fantastic game mechanics, great user experience. A recommendation for pro gamers, as well as beginners.",True,1,0
 "this game is awesome some people says its a pokemon rip off but as a pokemon fan myself i do not really see that  =) the only thing pokemon like is the palspheres but thats the monster catching genre in a nutshell palworld  is more comparable to ark survival evolved  then pokemon 
 
 ",True,1,0
@@ -64,30 +158,260 @@ The game is fun and all but it's nothing special by any metric.
 Fuck Nintendo
 
 5/8 Earthworms",True,1,0
-"Fun game.
-The updates keep bringing something new and fresh.
-Multiplay with friends always leads to fun",True,0,0
-im shur that this game is awesome but im disappointed that its unavailable on mac. as a new mac player i did not know that many games would not work for me i hope i can get a refund,False,0,2
-"ok so this game isnt for everyone and i want to make that clear. the first thing i found annoying was the character creation screen; its just full of cringy-ass anime personas with main character syndrome, it takes far too long to make a character look like an actual person (but thats just my opinion that nobody shares). the second thing (that def relates to some of you) is that this game was NOT made for low-end pcs. ive got a >$1000 msi gaming laptop and i had to set most of the settings to potato so i could play the game above 15 fps. i havent really explored a lot of the content but i partly like this game so much because of the eye candy, but thats because im used to half life 2 on potato settings and not games released in the past 20 years.",True,0,0
-Yeah. Very unique... great game... Buy it! Play through it... wait for an update... play through it again... wait for the next big update... PLAY IT AGAIN! Enjoy.,True,0,0
-its a really creative game that allows your mind to go places with building. also has detailed looks on the pals (creatures),True,0,0
-Super fun and addicting. Not too fond of some of the changes they had to make to appease the owners of Pokemon but still really cool and addicting game.,True,0,0
-This game is good! The base building and fighting of pals is very fun. Although the AI for controlling your pals is awful. Its so bad,True,0,0
-"I was skeptical since i dont like modern day pokemon. but, seeing all my starter pals show funny emotions while working, fighting, or dying made me laugh. its pretty fun. cant wait to advance further in the skill trees",True,0,0
-"pals should have slight size variations and personalities; examples- pal ""AGE"", pal satiation level (thin when starving) or really round depending on trait and posture. pal clothes too, that'd be dope. like sweaters for the flying types or timbs for the rock types. and also the organizations and factions should have claimable vehicles that can serve as a mobile pal box with a hefty upgrade cost. i feel like it still lacks. we got the most elements but they arent all dancing together yet.",True,0,0
-"Well built world, plenty of opportunity to grow, good graphic and animation, plenty of choice on how to develop. Good for casual and experienced players. Would be even better if you could access your friends world while they are offline as well.",True,0,0
-"Love building bases while having automation, their twist on it is awesome and fun! My only issue was the loc.sav file, because i wanted to buy a server and play with people more easily. After trail and error i found out i wasn't able too because how the file is saved, but awesome game!!! More content, less animations!
+"solid game, although my pc isnt very beefy, it still can run games like black ops 6, sons of the forrest and fifa just fine but struggles with palworld. i think its due to the amount of entities but the game is still really fun. leveling up is quite grueling combat feels really fun the pals at your base sometimes just dont do things tho",True,0,0
+"This game is the definition of perfect. İt's replayability is insane, İ almost made about 16 worlds and im still not bored. İt's been worth every second. İm in love with this game and i recommend it. İt's worth every single dollar.",True,0,0
+"Palworld is the 3D open-world creature collector game that Nintendo never managed to make, and it absolutely delivers on the fun. The world design is great, the Pals are all unique and interesting, and the mix of exploration, crafting, and combat keeps things fresh. Capturing and using Pals for base building and survival adds a new level of depth that other games in the genre are missing. The game really sucked me in, I played nonstop, just wanting to catch more Pals, build bigger bases, and explore every part of the map.
 
-P.S.
-Fix ownership of pals*, ive lost so many pals* to my guild* and a recent pals* used tab... nobody throws all their pals* in a box without a little know how and where my used pals* are / new pals* are etc. ( change the word to pals to ""clothes"" and guild to ""friend"" and you can see the issue in a real life example lol).",True,0,0
-good survival game with good gameplay and graphics. love it ...,True,0,0
-"Love this game.
-Recently took a break to let more content come but never the less I always return. Definitely a great game.",True,0,0
-so i mostly play in solo play mode. i tried to play the game online when it first came out. but at the time there was so many hackers that every time u logged in you'd have to start over from the very beginning. and and now after a year of this game has been out many good updates have come out. i still dont know anything about online play since those early days as i havnt found a new server that was doing a fresh start,True,0,0
-Game is very fun and with friends as well. Settings helps alot with how the world interacts to you on difficulty and how many pals spawn and or where they can spawn with a randomizer. I just wish cross play was out already.,True,0,0
-"This game is honestly really good, i hope they can win the lawsuit and continue building this game. 10/10 
-it's literally as if Ark and Pokemon had a baby, this would be it.",True,0,0
-"I highly recommend this game both for how fun and interesting it can be but also how challenging it can be first starting out. There's a lot to take in when you first take on the tutorial challenges but once you got the basics down, the only limitations you have are the ones you set yourself via the world settings.
+That said, the game still needs work, there’s no real story to tie everything together, and the balancing can feel off at times. Some Pals and weapons feel way too strong, while others feel useless. But despite that, Palworld is already a blast, and with some updates, it has the potential to be one of the best creature-collecting games out there. If you love open-world survival games and always wished Pokémon had more depth (and guns), this is definitely worth playing.",True,1,0
+"I absolutely love playing this game, and there’s definitely no resemblance to Pokémon whatsoever (wink, wink). You get to catch these adorable creatures called Pals—because, you know, it’s totally original—and then make them work on your homestead like little laborers. Oh, and don’t forget, you can also summon them to help you in epic battles. Totally unique concept, right?",True,0,0
+"Tho there isn't much to do, like in other survival games, this is still good. VERY GOOD.
 
-I mean, that and the amount of space you have for building from the Base starter and pal management area. But besides that! Super fun over all. Little limited on the furniture options without mods. That's alright though especially if you're not focused on making your base pretty!",True,0,0
-Solid adventure survival and monster taming mechanics. Everything you expect from a typical craft/build/survival genre and a monster tamer game put together. It has a lot of fun abilities and items. The mechanics are fairly self explanatory if you are a gamer but if you are new to gaming it could use a little bit more hand-holding. As it is in early access there is frequent updates and content being added. Even if it were to be officially released at this stage it is a fairly full game with lots of things to do. I will probably end up putting way more time in it.,True,0,0
+I just hope the DEVS finishes the game this time, they do have a bad rep for abandoning projects.
+
+But as for the game, think off, Ark survival mixed with pokemon.
+Buy it when it goes on special i'd say, but i do gave a thumbs up from my side.",True,0,0
+"
+---{ Graphics }---
+☐ You forget what reality is
+☐ Beautiful
+☑ Good
+☐ Decent
+☐ Bad
+☐ Don‘t look too long at it
+☐ MS-DOS
+
+---{ Gameplay }---
+☑ Very good
+☐ Good
+☐ It's just gameplay
+☐ Mehh
+☐ Watch paint dry instead
+☐ Just don't
+
+---{ Audio }---
+☐ Eargasm
+☐ Very good
+☑ Good
+☐ Not too bad
+☐ Bad
+☐ I'm now deaf
+
+---{ Audience }---
+☑ Kids
+☑ Teens
+☑ Adults
+☐ Grandma
+
+---{ PC Requirements }---
+☐ Check if you can run paint
+☐ Potato
+☐ Decent
+☑ Fast
+☐ Rich boi
+☐ Ask NASA if they have a spare computer
+
+---{ Game Size }---
+☐ Floppy Disk
+☐ Old Fashioned
+☐ Workable
+☑ Big
+☐ Will eat 10% of your 1TB hard drive
+☐ You will want an entire hard drive to hold it
+☐ You will need to invest in a black hole to hold all the data
+
+---{ Difficulty }---
+☐ Just press 'W'
+☐ Easy
+☑ Easy to learn / Hard to master
+☐ Significant brain usage
+☐ Difficult
+☐ Dark Souls
+
+---{ Grind }---
+☐ Nothing to grind
+☐ Only if u care about leaderboards/ranks
+☐ Isn't necessary to progress
+☑ Average grind level
+☐ Too much grind
+☐ You'll need a second life for grinding
+
+---{ Story }---
+☐ No Story
+☑ Some lore
+☐ Average
+☐ Good
+☐ Lovely
+☐ It'll replace your life
+
+---{ Game Time }---
+☐ Long enough for a cup of coffee
+☐ Short
+☐ Average
+☑ Long
+☐ To infinity and beyond
+
+---{ Price }---
+☐ It's free!
+☑ Worth the price
+☐ If it's on sale
+☐ If u have some spare money left
+☐ Not recommended
+☐ You could also just burn your money
+
+---{ Bugs }---
+☐ Never heard of
+☑ Minor bugs
+☐ Can get annoying
+☐ ARK: Survival Evolved
+☐ The game itself is a big terrarium for bugs
+
+---{ ? / 10 }---
+☐ 1
+☐ 2
+☐ 3
+☐ 4
+☐ 5
+☐ 6
+☐ 7
+☑ 8
+☐ 9
+☐ 10
+
+Really nice mechanics, most fun with one or more friends. Sadly the game is not well optimized, and it seems to be luck based if the Game runs perfectly fine for you or not. Hope they fix the Optimization.
+
+
+",True,0,0
+"This game is fantastic, better than Ark survival and Pokemon.
+Very possible to get 100%  of achievements.
+Huge open map with a ton of creatures to capture and battle.
+Crafting things does take quite a lot of time though.
+Much more fun with friends too, though overseas friends will experience connection lag with push and pull.
+
+Jetragon is great for fast a moving mount, Anubis is good for farming Palsouls.
+Sleeping pals are easy to capture since campfire damage is a thing.
+Dark pals are great for 24/h workers
+World settings are easy to comprehend and are great if you want a more relaxing time or to not have to worry about penalties with death or inventory weight management or if you want a more challenging experience.",True,0,0
+"the love put into this game is incredibly apparent and shows what a monster catching game could be like. while i admit, a COUPLE of the designs of the initial release were uninspired and blatant copies of some pokemon, there are so many more unique and creative ones, or ones that take inspiration and uniquely improve upon the design (e.g orserk v garchomp, imo orserk is way cooler). With the latest sakurajima and especially feybreak updates, every pal in that got added is unique in design from any pokemon, and goes to show the creativity the devs have and the love for this game they are putting in. this all goes without mentioning all the fun gameplay things they add, ranging from things that casual players can enjoy such as exploration and finding new pals, to things that hardcore players can put hours and hours into. 
+
+overall a really good game that gives some much needed life to the creature capture genre. praying pocket pair continues to introduce more fun and interesting mechanics and areas and expands on the already large amount of interesting pals in the game",True,0,0
+"Building was ass and is ass, customization is bare minimum for buildings. They removed the whole catch system which was the main reason I bought the game. the last updates were more expanding than making the smaller things good/more fun.",False,0,0
+"Great game on release, even better now! Easily got 100+ hours since the last big update. Out of all early access survival games, this really has a good amount of content. If it had a good fishing mechanic, it would be an EASY 10/10!",True,0,0
+"Not a bad game but gets boring really fast with how grindy it gets and with dull combat, also I don't understand how people compare this to pokemon gameplay wise since they play nothing alike, which I don't really get what people think is innovative about this since its basically just ark but somewhat better",False,0,0
+"does what nintendo should've been doing ages ago, while it does take a lot of ideas from other games, it also has cool unique stuff built in that turns out to be the best parts of it.",True,0,0
+This game is literally a time machine where you just started the game and then BOOM you are into your 100 hours. I'm a Pokemon fan myself but I do not reject good games like this.,True,0,0
+I love this game. It's so fun. A great couple game!,True,0,0
+"I dont have a single bad thing to say about this game, even the bugs are fun, the joys this game brings me is immense.
+
+Thank you for the fun",True,0,1
+"While I only have 40 hours total in this game, I absolutely love it. The Pals are adorable and the guns are awesome! Can't wait for them to finally add a story or campaign (if they're going to).",True,0,0
+Seems like a great game for the [young enough to play games] - 14 year old bracket. *thumbs up*,True,0,0
+"Actually a very fun survival game.
+Its like Ark survival but without the need to senselessly sink vast amounts of time into it.
+It's also a bit like Pokemon/Digimon but with more robust gameplay systems in place.
+A survival game where base building is fun and tasks can be automated utilising an army of Pal slaves.
+
+8/10
+You can capture humans XD",True,0,0
+What we wished the modern poke master games were. Works on the Steam deck and has very customizable settings that can be changed to reduce the grinding if you don't want to bother with it. Skyrim meets Ark with pals. Soloer friendly,True,0,0
+"It's a really fun game similar to pokemon, and I like that the pals can battle each other without the player having to do anything, and the player can be part of the fight",True,0,0
+This is a super fun game that's gotten over all of its early bugs to become a really fun experience. Absolutely addicted!,True,0,0
+"The game is very fun. I haven't played multiplayer yet, but single player is still really fun.",True,0,0
+"It's a really forgiving 'survival' game even at normal settings resources and progress have a steady pace up till you get to intermediate to advanced tech. Building bases could use a bit of improvement and more parts (like half walls,railings, etc.)  but it's a lot of fun for what doesn't need to be a huge time investment.
+
+I had my first base feeling self sufficient in the first day of play, and now at 20 hours in I'm well into my second base building a completely unnecessary fortress(when I should be progressing) just because I have the resources to spare and I can. I expected it to take much longer to get to the point I could just build things for fun. Especially after having played games like ARK.
+
+My only disappointment so far is the lack of interaction with the factions and characters in game. Even the boss battles are just intro scene and then you fight with no words or explanation whatsoever that's a bit weird to me.
+
+TLDR: If you want a low stress 'survival' sandbox to fool around in this is a safe bet. Though if you're looking for plot or interesting characters to interact with this ain't it. Lore isn't that deep here.",True,0,0
+"Content continues to grow, Gameplay is good, but late-game content scales to be as meticulous and boring as an MMORPG.",True,0,0
+"I think its valid, its cool making all the lil creature fellas do slave work as you do nothing 7/10",True,0,0
+"Its less like pokemon with guns and more like Ark survival with pokemon. Great game :D
+Its a survival game and all the pals have interesting abilities when in your party ect.",True,0,0
+"Only 7 hours in and I can't stop playing. It's 2.19 AM and I have blood tests to do at 9.00 AM lol. I haven't sunk into a game like this in a long time. I have to go to bed :P But I'm looking forward to jumping on tomorrow. 
+
+I picked this game up for $32.96 AUD and it's worth every cent. Kudos to the developers, I'm not an easy person to please when it comes to video games. I'm loving the Penguin pal, I take him every where when I go to slaughter everything.
+
+I'm sure I'll have some later feedback, like the timer on food that can be reset by just clicking the sort button. But that's trivial. I can handle small things like that. Other than that, the game runs really well. The game has Zelda vibes, but with building / tower defence / pokemon / minecraft / World of Warcraft. That's my take on it. 
+
+Anyway, wish me luck for my blood tests, hopefully my arm doesn't fall off.",True,0,0
+Think Ark with Pokemon. Ok once you have that idea you have this game. Very fun and addictive. More fun with friends. But still fun to go explore the game world alone.,True,0,0
+its fun and almost like pokemon and love pokemon the base building and servival is awsome,True,0,0
+"This game has been everything I had hoped for! I'm determined to get this game to full completion in every way imaginable. The base building is fantastic I love the mechanics of building a base in this game with all of it's functions. One thing I find quite annoying is that if I log off and come back on the next day all of my pals at base are in critical condition with all sorts of sicknesses and low SAN, to solve this I just drop them on their own page in the pal box before I log out and take them all out every time I log in. The range of pals is pretty neat and I'm kinda sucked in to wanting to catch every single one of them. This game is so in depth with the pal perks and stats you really have the possibility to create your dream team pal arsenal! I love the game so much I went ahead and got 6 months server time for my own server I'm currently level 54 and still have SO much to learn about this game and that is a very good thing! This has been a game I want to play and play.. and play. :D. If you haven't picked up this game yet I'm telling you - you have NOTHING to loose! This game has been a 10/10 on a scale of enjoyment for me highly recommend!",True,0,0
+First played on Xbox through gamepass Just bought it again on PC. A lot of new changes since I last played. Lot of cute and cool pals. My favorite thing about this game is that how grindy the game can be  is 100% up to how you play and you can even change it in the settings. Pal designs are great I wish they would come out with plushies. Really cozy survival game.,True,0,0
+A fun base building monster tamer style game.  A lot of potential and can't wait for the full release,True,0,0
+"This should be the new standard for an Early Access games. 
+
+I don´t really have anything to complain about, it feels like a complete and very well made game.
+Only pointers: 
+- More pals
+- Better technology tree (Or system) 
+- Job priorities (Like in Rimworld) 
+- Job commands for crafting stations (Like in Rimworld - ´Slaughter animal - Infinite´ - would be nice for spheres) 
+- Make transport more powerful - double if not triple it´s effect.
+- Make pals able to empty workcamps (Stone pit, Logging site etc.) 
+
+It isn´t a fantastic co-op game since paldium is used for Pal spheres which can be quite the hastle for two people to share early in the game. 
+
+8/10.",True,0,0
+"It's very good, big map, a lot of pals, a lot of abilities, and a lot of guns, it's so damn good 😂😭 (mods are also very easy to install, and actually ""January 26 2025"" there are 74 pages of mods on Nexus Mods)",True,0,0
+"Very fun, adorable creatueres, honestly fun survival gameplay.",True,0,0
+"This game is fantastic, i'm hooked, have been for more then 100 hrs, hell i'm playing it as I write this, if I had one request out of everything is that the humans you capture i wish could still use their guns when on your side. but dear lord I cant wait for the full release. the game is massive, colorful and alive but a bit empty which I know they'll improve 8.5/10",True,0,0
+"It fills a very niche gaming desire for me. It is a fun game overall but I feel progress slows down in the mid to late game where it gets a little too tedious and grindy even with the settings adjusted. The “legally distinct pals” are cool but some definitely are just rip offs which is a little disappointing. Fun game but wish they actually put more effort into the pal designs.
+",True,0,0
+"This game has a wonderful mix of adorable creatures, building, combat and exploration. It's not perfect. The constant need for food is annoying. The building glitches are annoying. But it's so fun—solo and/or with friends. The landscape is absolutely beautiful and I adore the creatures. Give it a try!",True,0,0
+"Nice game, you can play it the way you want, there are many setting to use and I decided to put 50 pals on each of my bases and it's one of the most satisfying thing to watch, having a bunch of perfect passives pals producing hundreds of thousands of ores and food.",True,0,0
+"솔직히 이 게임 몇년 전에 트레일러 처음 나왔을 때만 해도
+""대체 시벌 뭔 게임이야 이게...?"" 싶었었고
+발매 전까지 진짜로 나올줄 몰랐는데
+
+생각보다 재밌는 게임입니다.
+근데 너무 기대하면 게임의 하자가 조금씩 보입니다.
+
+게임의 기획이나 그런 부분의 하자가 아니라
+버그 같은 성능 문제의 하자 말이죠.
+
+포켓몬 같은 게임을 원하시면 이건 대체제가 되진 못하고
+아크 같은 게임을 원하시면 훌륭한 대체제가 될겁니다.
+
+마침 이 게임이랑 아크 둘다 성능에 하자가 있다는 공통점도 있네요.
+최적화 개등신 같고 변경점도 없는 1.5 버전이나 내놓고 24년도에 내놓는다던 2도 무기한 연기한 아크 하지 마시고
+이 게임이나 하세요. 어차피 이 게임도 디렉터 때문에 곧 아크 노선 탈 것 같지만",True,0,0
+"Best survival Pocket monster style game. With funny extra stuff like gun, rocket,and many other fun stuff.
+Its much more fun with friends",True,0,0
+"No doubt like many others, I got this game basically just to point and laugh at the pokemon rip off. I could not have been more wrong about this game. This game is what pokemon should be. I have been hoping that pokemon would do something like this for over a decade. Legends Arceus being the closest thing. There are certainly some designs that are blatant rip offs of pokemon, but from what I have seen thus far, there are significantly fewer of those than I was lead to believe. As a survival game, this game is fantastic. It is incredibly immersive to live in tandem with the pals, working and fighting alongside them. Seeing them all walk around and exist in their respective habitats is fascinating. I am surprised that it took this long for something like this to come along. Fighting alongside your pals while dodging enemy attacks is incredibly engaging. The map is absolutely enormous and filled with interesting things to find, like chests, dungeons, upgrades, and most importantly, new pals. The progression is vast and it feels like each level up is actually meaningful in terms of tech for your base and weapons for taking on stronger enemies. My biggest complaints about the game revolve around bugs and general stability. I can often play without issue for extended periods, but when a bug does happen, it can be game breaking, like falling through the map, or pals being stuck in place and not being able to do anything. These bugs hopefully will be ironed out in due time. All that said, I am extremely excited to see where this game goes in the future. To anyone on the fence about picking this game up, or to anyone who still thinks this is a rip off of pokemon, I strongly urge you to give this game a try, I honestly wish I had given it a chance sooner.",True,0,0
+"Very good game, the slavery is what makes it hella fun. 1800's type simulator. 10/10",True,0,0
+"Great wee game, very addictive gameplay. Defo worth the price",True,0,0
+"Coming from similar games, I really like how this quite light hearted accompanied by the graphics and animations, you really get a sense of being friends with the pals, and they are helping you. The developers have done well making this game, the look and feel of it is suitable for many and it has good challenges throughout the story too.",True,0,0
+Lots of different things to have fun with. great game if you like to grind a bit,True,0,0
+"Great fun! The devs have done a better job of listening to the community and making major, minor, and even simple quality of life improvements to the game than I've seen from any other game dev.",True,0,0
+"Bought it so I can play something with my friend and damn it was worth it. The first 5 hours I felt bad about killing and eating Pals, but I realised that you know... It is what it is. The nature is brutal and one has to die so another can live. It's the circle of life. So I bred and butchered them bastards to get some pal fluids and shit to make more guns and spheres to enslave more!
+Now I know how the first Americans must have felt and it's great...",True,0,0
+i like this game very much.Nice graphics and texture of grass and mountains as well as nice pals,True,0,0
+"Amazing game, only problem I've had is that there isnt more of it top play! Even then they seem to be working on more content everyday and I love it! 10/10!!!",True,0,0
+"Why can't I build continuously but have to build piece by piece, pressing B every time, which is very inconvenient? Can someone explain this to me? The rest of the game is very good.",True,0,0
+"Great game, highly configurable for play style variations. Funny, fun, and deeply complex if you want it to be. Dev team seems like they just want to give you a good time. 10/10",True,0,0
+"Absolutely adored this game. Never played a Pokemon game, but was intrigued with what I've been hearing about the game. Downloaded it and over 500 hours later and 5 full play-throughs, this is a very easy recommendation. 
+
+There are some spots that are a little rough around the edges, but there is so much to do with base building, raids, tweaking settings to your choosing, the map is enormous and ripe with secrets.",True,0,0
+"It is what it says on the tin. Good and varied amounts of pokemon, guns, and base building. Are there improvements that could be made? definitely. Are my expectations exceedingly low because of pokemon underpromising and underdelivering for decades? definitely. Have I had a lot of fun, are the systems deep enough and do I love being in this world? definitely. 
+
+and the devs are updating, committed and responsive. worth full price 10/10",True,0,0
+it's so much fun to play with someone who know what they are doing i still kinda new to this game but i have been playing this game every day with new updates i am exited for the full game,True,0,0
+"- Spent way too many hours re-organizing my bases
+- Enslaved an entire household of Anubis gods
+- One of the best game to play with friends
+
+10 / 10, would highly recommend!",True,0,0
+"As great as when Nintendo had actual creativity in their games. Bought it about a week after it was released and it's only gotten better (Besides the removal of the feature of being able to throw the Pals in your party in a certain spot instead of right next to you, really wish that would come back)",True,0,0
+nothing much too say except the game is stupidly addictive and a blast to play either by yourself or with friends...and you know...Pocketpair genuinely care their player base so yeah a really fun experience.,True,0,0
+"Game is very entertaining, and there is so much to do that it can take you awhile to have done everything in the game. Along with trying to catch every pal, building a base, and exploring the map, there is so much to do and its fun.",True,0,0
+"This game is super sick. It is a well designed survival game with a fun creature capture element. I've described it as ""Pokemon for adults.""
+I also play Pokemon, but this has a significant tonal shift.",True,0,0
+"It's a very good monster collector/battler. As someone intimate with the genre, I couldn't be happier with the breeding system, and the various ways to improve pals (Skill fruit, Elixers, etc.). The true signal of a good monster raising game is the ability to beat even the hardest bosses with your favorites, and PocketPair made that possible. Of course some pals will be better than others out of the box, but with some real dedication you can have a Lamball much more powerful than any Jetragon.
+
+Usually I hate open world games but Palworld makes exploring very fun with various mounts and tech for getting around fast.
+
+The game was super buggy on launch but the devs are really devoted to fixing the problems and adding real, tangible content. They've added new Pals here and there, new bosses, and even an entirely new area. 
+
+Overall the game's a steal. Its easy to invest a lot of time just into the Pals. I'd highly recommend it.",True,0,0
+"It's fun to play with my bf forsure! Im not very technical but the game runs great and I have had no problems besides servers mostly being a bit laggy, so I pick the lowest ping.",True,0,0
