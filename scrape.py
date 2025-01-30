@@ -5,7 +5,6 @@ import json
 from googleapiclient.discovery import build
 from bs4 import BeautifulSoup
 import pandas as pd
-import requests
 import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -13,7 +12,6 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 import os
 from dotenv import load_dotenv
-
 
 # ========== 🎮 LIST OF GAMES BY GENRE ==========
 games = {
@@ -25,11 +23,9 @@ games = {
 }
 
 # ========== 🔑 API CREDENTIALS ==========
-
-# Load environment variables
 load_dotenv()
 
-# Access API credentials
+# Load API credentials securely
 REDDIT = {
     "client_id": os.getenv("REDDIT_CLIENT_ID"),
     "client_secret": os.getenv("REDDIT_CLIENT_SECRET"),
@@ -45,54 +41,110 @@ TWITTER = {
 
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
 
+# ========== ✅ API VALIDATION ==========
+def is_valid_reddit():
+    try:
+        reddit = praw.Reddit(**REDDIT)
+        reddit.user.me()  # Test authentication
+        return True
+    except Exception as e:
+        print(f"❌ Reddit API error: {e}")
+        return False
+
+def is_valid_twitter():
+    try:
+        auth = tweepy.OAuthHandler(TWITTER["api_key"], TWITTER["api_secret"])
+        auth.set_access_token(TWITTER["access_token"], TWITTER["access_secret"])
+        api = tweepy.API(auth)
+        api.verify_credentials()  # Test authentication
+        return True
+    except Exception as e:
+        print(f"❌ Twitter API error: {e}")
+        return False
+
+def is_valid_youtube():
+    try:
+        youtube = build("youtube", "v3", developerKey=YOUTUBE_API_KEY)
+        youtube.search().list(q="test", part="snippet", maxResults=1).execute()  # Test query
+        return True
+    except Exception as e:
+        print(f"❌ YouTube API error: {e}")
+        return False
+
+# **Check APIs ONCE before running**
+USE_REDDIT = is_valid_reddit()
+USE_TWITTER = is_valid_twitter()
+USE_YOUTUBE = is_valid_youtube()
+
 # ========== 🔍 SCRAPING FUNCTIONS ==========
 def scrape_reddit(game):
-    reddit = praw.Reddit(**REDDIT)
-    subreddit = reddit.subreddit("gaming")
-    posts = subreddit.search(game, limit=50)
-
-    comments_data = []
-    for post in posts:
-        post.comments.replace_more(limit=5)
-        for comment in post.comments.list():
-            comments_data.append([post.title, post.score, comment.body, comment.score])
-
-    df = pd.DataFrame(comments_data, columns=["Post Title", "Post Score", "Comment", "Comment Score"])
-    df.to_csv(f"data/{game}_reddit.csv", index=False)
-    print(f"✅ Reddit data for {game} saved!")
-
-def scrape_twitter(game):
-    auth = tweepy.OAuthHandler(TWITTER["api_key"], TWITTER["api_secret"])
-    auth.set_access_token(TWITTER["access_token"], TWITTER["access_secret"])
-    api = tweepy.API(auth)
-
-    tweets = tweepy.Cursor(api.search_tweets, q=game, lang="en", tweet_mode="extended").items(50)
-    tweet_data = [[tweet.user.screen_name, tweet.full_text, tweet.created_at, tweet.favorite_count, tweet.retweet_count] for tweet in tweets]
-
-    df = pd.DataFrame(tweet_data, columns=["Username", "Tweet", "Date", "Likes", "Retweets"])
-    df.to_csv(f"data/{game}_twitter.csv", index=False)
-    print(f"✅ Twitter data for {game} saved!")
-
-def scrape_youtube(game):
-    youtube = build("youtube", "v3", developerKey=YOUTUBE_API_KEY)
-    request = youtube.search().list(q=game, part="snippet", maxResults=1, type="video")
-    response = request.execute()
-
-    video_id = response["items"][0]["id"]["videoId"] if response["items"] else None
-    if not video_id:
-        print(f"⚠️ No YouTube video found for {game}")
+    if not USE_REDDIT:
+        print(f"⚠️ Skipping Reddit scraping for {game}, API disabled.")
         return
 
-    request = youtube.commentThreads().list(part="snippet", videoId=video_id, textFormat="plainText", maxResults=50)
-    response = request.execute()
+    try:
+        reddit = praw.Reddit(**REDDIT)
+        subreddit = reddit.subreddit("gaming")
+        posts = subreddit.search(game, limit=50)
 
-    comments = [[item["snippet"]["topLevelComment"]["snippet"]["authorDisplayName"],
-                 item["snippet"]["topLevelComment"]["snippet"]["textDisplay"],
-                 item["snippet"]["topLevelComment"]["snippet"]["likeCount"]] for item in response["items"]]
+        comments_data = []
+        for post in posts:
+            post.comments.replace_more(limit=5)
+            for comment in post.comments.list():
+                comments_data.append([post.title, post.score, comment.body, comment.score])
 
-    df = pd.DataFrame(comments, columns=["Author", "Comment", "Likes"])
-    df.to_csv(f"data/{game}_youtube.csv", index=False)
-    print(f"✅ YouTube data for {game} saved!")
+        df = pd.DataFrame(comments_data, columns=["Post Title", "Post Score", "Comment", "Comment Score"])
+        df.to_csv(f"data/{game}_reddit.csv", index=False)
+        print(f"✅ Reddit data for {game} saved!")
+    except Exception as e:
+        print(f"❌ Error scraping Reddit for {game}: {e}")
+
+def scrape_twitter(game):
+    if not USE_TWITTER:
+        print(f"⚠️ Skipping Twitter scraping for {game}, API disabled.")
+        return
+
+    try:
+        auth = tweepy.OAuthHandler(TWITTER["api_key"], TWITTER["api_secret"])
+        auth.set_access_token(TWITTER["access_token"], TWITTER["access_secret"])
+        api = tweepy.API(auth)
+
+        tweets = tweepy.Cursor(api.search_tweets, q=game, lang="en", tweet_mode="extended").items(50)
+        tweet_data = [[tweet.user.screen_name, tweet.full_text, tweet.created_at, tweet.favorite_count, tweet.retweet_count] for tweet in tweets]
+
+        df = pd.DataFrame(tweet_data, columns=["Username", "Tweet", "Date", "Likes", "Retweets"])
+        df.to_csv(f"data/{game}_twitter.csv", index=False)
+        print(f"✅ Twitter data for {game} saved!")
+    except Exception as e:
+        print(f"❌ Error scraping Twitter for {game}: {e}")
+
+def scrape_youtube(game):
+    if not USE_YOUTUBE:
+        print(f"⚠️ Skipping YouTube scraping for {game}, API disabled.")
+        return
+
+    try:
+        youtube = build("youtube", "v3", developerKey=YOUTUBE_API_KEY)
+        request = youtube.search().list(q=game, part="snippet", maxResults=1, type="video")
+        response = request.execute()
+
+        video_id = response["items"][0]["id"]["videoId"] if response["items"] else None
+        if not video_id:
+            print(f"⚠️ No YouTube video found for {game}")
+            return
+
+        request = youtube.commentThreads().list(part="snippet", videoId=video_id, textFormat="plainText", maxResults=50)
+        response = request.execute()
+
+        comments = [[item["snippet"]["topLevelComment"]["snippet"]["authorDisplayName"],
+                     item["snippet"]["topLevelComment"]["snippet"]["textDisplay"],
+                     item["snippet"]["topLevelComment"]["snippet"]["likeCount"]] for item in response["items"]]
+
+        df = pd.DataFrame(comments, columns=["Author", "Comment", "Likes"])
+        df.to_csv(f"data/{game}_youtube.csv", index=False)
+        print(f"✅ YouTube data for {game} saved!")
+    except Exception as e:
+        print(f"❌ Error scraping YouTube for {game}: {e}")
 
 def scrape_steam(game, app_id, num_reviews=500):
     url = f"https://store.steampowered.com/appreviews/{app_id}?json=1&num_per_page=100"
@@ -126,6 +178,10 @@ def scrape_steam(game, app_id, num_reviews=500):
     df = pd.DataFrame(all_reviews, columns=["Review", "Positive", "Helpful Votes", "Funny Votes"])
     df.to_csv(f"data/{game}_steam.csv", index=False)
     print(f"✅ Steam reviews for {game} ({len(all_reviews)} total) saved!")
+
+
+
+
 
 def scrape_metacritic(game):
     formatted_game = game.lower().replace(" ", "-")
@@ -193,10 +249,10 @@ def run_scraper():
 
     for genre, game_list in games.items():
         for game in game_list:
-            #print(f"\n📌 Scraping data for: {game} ({genre})...")
-            #scrape_reddit(game)
-            #scrape_twitter(game)
-            #scrape_youtube(game)
+            print(f"\n📌 Scraping data for: {game} ({genre})...") 
+            scrape_reddit(game) 
+            scrape_twitter(game) 
+            scrape_youtube(game) 
             if steam_ids.get(game):
                 scrape_steam(game, steam_ids[game])
             scrape_metacritic(game)
