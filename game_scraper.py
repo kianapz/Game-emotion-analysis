@@ -20,12 +20,13 @@ GAMES = {
         "Elden Ring": "1245620"
     },
     "Shooter": {
-        "Call of Duty: Modern Warfare III": "2512980",
+        "Call of Duty: Modern Warfare 3": "2512980",
         "Overwatch 2": "2357570"
     },
     "Survival": {
-        "Palworld": "1623730",
-        "ARK: Survival Evolved": "346110"
+        "ARK: Survival Evolved": "346110",
+        "Palworld": "1623730"
+        
     },
     "Open-World": {
         "GTA 6": None,  # Not released yet
@@ -164,16 +165,16 @@ def scrape_youtube(game, directory):
         search_request = youtube.search().list(
             q=game,
             part="snippet",
-            maxResults=5, # Search for top 5 videos related to the game
+            maxResults=50, # Search for top 50 videos related to the game
             type="video"
         )
         search_response = search_request.execute()
         all_comments = []
         for item in search_response.get("items", []):
             video_id = item["id"].get("videoId")
-            video_title = item["snippet"]["title"]
-            try:
-                comments_request = youtube.commentThreads().list(  # Check if comments are enabled for this video
+            # video_title = item["snippet"]["title"]
+            try: # Check if comments are enabled for this video
+                comments_request = youtube.commentThreads().list(  
                     part="snippet",
                     videoId=video_id,
                     textFormat="plainText",
@@ -184,27 +185,30 @@ def scrape_youtube(game, directory):
                     continue  # Skip this video if comments are disabled
                 else:
                     raise  
+            
             comments = []
             next_page_token = None
-            while len(comments) < 25: # Fetch up to 25 comments for this video
+            max_comment_count = 100
+            while len(comments) < max_comment_count: # Fetch up to 50 comments for this video
                 request = youtube.commentThreads().list(
                     part="snippet",
                     videoId=video_id,
                     textFormat="plainText",
-                    maxResults=min(25 - len(comments), 50),  # Fetch remaining comments
+                    maxResults=min(max_comment_count, max_comment_count - len(comments)),  # Fetch remaining comments
                     pageToken=next_page_token
                 )
                 response = request.execute()
                 for item in response.get("items", []):
                     comment_data = item["snippet"]["topLevelComment"]["snippet"]
                     comments.append([
-                        video_title,
+                        # video_title,
                         video_id,
                         comment_data["authorDisplayName"],
                         comment_data["textDisplay"],
+                        comment_data["publishedAt"],
                         comment_data["likeCount"]
                     ])
-                    if len(comments) >= 25:
+                    if len(comments) >= max_comment_count:
                         break  # Stop when we have enough comments
                 next_page_token = response.get("nextPageToken")
                 if not next_page_token:
@@ -213,7 +217,7 @@ def scrape_youtube(game, directory):
             all_comments.extend(comments)
         # Save data if comments exist
         if all_comments:
-            df = pd.DataFrame(all_comments, columns=["Video Title", "Video ID", "Author", "Comment", "Likes"])
+            df = pd.DataFrame(all_comments, columns=["Video ID", "Author", "Comment", "Date", "Likes"])
             df.to_csv(f"{directory}/youtube_comments_{game}.csv", index=False)
             print(f"\tYoutube data for {game} saved!")
         else:
@@ -297,7 +301,7 @@ def scrape_metacritic(game, directory):
             # Extract quote
             quote_element = review.find_element(By.CSS_SELECTOR, ".c-siteReview_quote span")
             quote = quote_element.text.strip() if quote_element else "No Quote"
-            reviews.append([ # add all reviews to array
+            reviews.append([
                 username, 
                 int(score) * 10,
                 quote
@@ -329,19 +333,19 @@ def run_scraper():
         os.makedirs(directory, exist_ok=True)
         for game, steamID in game_list.items():
             print(f"Scraping data for: {game} ({genre})...")
-            # get reddit comments
-            if validate_reddit(): 
-                scrape_reddit(game, directory)
-            # get twitter comments (VERY LIMITED -> FIND FIX)
-            if validate_twitter(): 
-                scrape_twitter(game, directory)
-            # get youtube comments (LIMITED -> FIND FIX)
+            # # get reddit comments
+            # if validate_reddit(): 
+            #     scrape_reddit(game, directory)
+            # # get twitter comments (VERY LIMITED -> FIND FIX)
+            # if validate_twitter(): 
+            #     scrape_twitter(game, directory)
+            # # get youtube comments (LIMITED -> FIND FIX)
             if validate_youtube():
                 scrape_youtube(game, directory)
-            # get steam comments
-            scrape_steam(game, directory, steamID)
-            # # get metacritic comments
-            scrape_metacritic(game, directory)
+            # # get steam comments
+            # scrape_steam(game, directory, steamID)
+            # # # get metacritic comments
+            # scrape_metacritic(game, directory)
         print()
 
 def main():
