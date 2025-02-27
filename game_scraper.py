@@ -11,13 +11,17 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from dotenv import load_dotenv
+from datetime import datetime, timezone
+
+load_dotenv() # load keys
 
 #########################################################
 # VARIABLE DEFINITIONS
 GAMES = {
     "RPG": {
         "Baldur's Gate 3": "1086940",
-        "Elden Ring": "1245620"
+        "Elden Ring": "1245620",
+        "Cyberpunk 2077": "1091500"
     },
     "Shooter": {
         "Call of Duty: Modern Warfare 3": "2512980",
@@ -29,12 +33,30 @@ GAMES = {
         
     },
     "Open-World": {
-        "GTA 6": None,  # Not released yet
+        "GTA 6": None,
         "Cyberpunk 2077": "1091500"
     },
     "Strategy": {
         "Age of Empires IV": "1466860",
         "Total War: Warhammer III": "1142710"
+    },
+    "Action": {
+        "The Last of Us Part I": "1888930",
+        "The Last of Us Part II": None,
+        "Death Stranding": "1190460",
+        "Red Dead Redemption 2": "1174180",
+        "Detroit: Become Human": "1222140",
+        "God of War Ragnarok": None 
+    },
+    "Adventure": {
+        "Stray": "1332010",
+        "Indiana Jones and the Great Circle": None
+    },
+    "Puzzle": {
+        "Inside": "304430",
+        "Limbo": "48000",
+        "Little Nightmares": "424840",
+        "It Takes Two": "1426210"
     }
 }
 REDDIT_CREDENTIALS = { # Get Reddit credentials
@@ -97,21 +119,22 @@ def scrape_reddit(game, directory):
         posts = subreddit.search(game, limit=50)
         data = []
         for post in posts:
-            post.comments.replace_more(limit=5)  # Load top-level comments, ignore "MoreComments"
+            post_date = datetime.fromtimestamp(post.created_utc, tz=timezone.utc).strftime('%Y-%m-%d')
+            post.comments.replace_more(limit=10)  # Load top-level comments
             for comment in post.comments.list():
                 if isinstance(comment, praw.models.MoreComments):  
                     continue  # Skip 'MoreComments' objects
-                data.append([post.title, post.score, comment.body, comment.score])
-        # Save to CSV if data exists
+                comment_date = datetime.fromtimestamp(comment.created_utc, tz=timezone.utc).strftime('%Y-%m-%d')
+                data.append([post.id, post_date, comment_date, comment.body])
+        # Save to CSV if data exists ( post.score, comment.score)
         if data:
-            df = pd.DataFrame(data, columns=["Post Title", "Post Score", "Comment", "Comment Score"])
+            df = pd.DataFrame(data, columns=["Post ID", "Post Date",  "Comment Date", "Comment"])
             df.to_csv(f"{directory}/reddit_comments_{game}.csv", index=False)
             print(f"\tReddit data for {game} saved!")
         else:
             print(f"\tNo Reddit data for {game}.")
     except Exception as e:
         print(f"\tError scraping Reddit for {game}..: {e}")
-    time.sleep(5)  # Avoid rate limits 
 
 def scrape_twitter(game, directory):
     """
@@ -148,7 +171,6 @@ def scrape_twitter(game, directory):
             print(f"\tNo Twitter data for {game}.")
     except Exception as e:
         print(f"\tError scraping Twitter for {game}: {e}")
-    time.sleep(5)  # Avoid rate limits 
 
 def scrape_youtube(game, directory):
     """
@@ -204,8 +226,8 @@ def scrape_youtube(game, directory):
                         # video_title,
                         video_id,
                         comment_data["authorDisplayName"],
-                        comment_data["textDisplay"],
                         comment_data["publishedAt"],
+                        comment_data["textDisplay"],
                         comment_data["likeCount"]
                     ])
                     if len(comments) >= max_comment_count:
@@ -217,14 +239,13 @@ def scrape_youtube(game, directory):
             all_comments.extend(comments)
         # Save data if comments exist
         if all_comments:
-            df = pd.DataFrame(all_comments, columns=["Video ID", "Author", "Comment", "Date", "Likes"])
+            df = pd.DataFrame(all_comments, columns=["Video ID", "Author", "Date", "Comment", "Likes"])
             df.to_csv(f"{directory}/youtube_comments_{game}.csv", index=False)
             print(f"\tYoutube data for {game} saved!")
         else:
             print(f"\tNo Youtube data for {game}.")
     except Exception as e:
         print(f"\tError scraping YouTube for {game}: {e}")
-    time.sleep(5)  # Avoid rate limits 
     
 def scrape_steam(game, directory, steamID):
     """
@@ -253,7 +274,8 @@ def scrape_steam(game, directory, steamID):
                 review["review"],
                 review["voted_up"],
                 review["votes_up"],
-                review["votes_funny"]
+                review["votes_funny"],
+                pd.to_datetime(review["timestamp_created"], unit='s')
             ])
 
         if "cursor" in data and data["cursor"] != cursor:
@@ -262,7 +284,7 @@ def scrape_steam(game, directory, steamID):
             break  # Stop if no more new reviews
     # Limit to requested number
     all_reviews = all_reviews[:num_reviews]
-    df = pd.DataFrame(all_reviews, columns=["Review", "Positive", "Helpful Votes", "Funny Votes"])
+    df = pd.DataFrame(all_reviews, columns=["Review", "Positive", "Helpful Votes", "Funny Votes" , "Date"])
     df.to_csv(f"{directory}/steam_comments_{game}.csv", index=False)
     print(f"\tSteam data for {game} saved!")
 
@@ -286,7 +308,7 @@ def scrape_metacritic(game, directory):
     service = Service(ChromeDriverManager().install()) # Make sure correct webdriver is installed
     driver = webdriver.Chrome(service=service, options=options)
     driver.get(url) # get webpage
-    time.sleep(5) # sleep to make sure webpage loads
+    time.sleep(2) # sleep to make sure webpage loads
     reviews = []
     try:
         review_blocks = driver.find_elements(By.CSS_SELECTOR, ".c-siteReview")
@@ -301,15 +323,20 @@ def scrape_metacritic(game, directory):
             # Extract quote
             quote_element = review.find_element(By.CSS_SELECTOR, ".c-siteReview_quote span")
             quote = quote_element.text.strip() if quote_element else "No Quote"
+            # Extract date
+            date_element = review.find_element(By.CSS_SELECTOR, ".c-siteReviewHeader_reviewDate")
+            date_obj = datetime.strptime(date_element.text.strip(), "%b %d, %Y")
+            formatted_date = date_obj.strftime('%Y-%m-%d')
             reviews.append([
                 username, 
+                formatted_date,
                 int(score) * 10,
-                quote
+                quote,
             ])
         driver.quit()
         # Save reviews to CSV if there are any
         if reviews:
-            df = pd.DataFrame(reviews, columns=["Username", "Score %", "Review"])
+            df = pd.DataFrame(reviews, columns=["Username", "Date", "Score %", "Review"])
             df.to_csv(f"{directory}/metacritic_comments_{game}.csv", index=False)
             print(f"\tMetacritic data for {game} saved!")
         else:
@@ -333,23 +360,22 @@ def run_scraper():
         os.makedirs(directory, exist_ok=True)
         for game, steamID in game_list.items():
             print(f"Scraping data for: {game} ({genre})...")
-            # # get reddit comments
-            # if validate_reddit(): 
-            #     scrape_reddit(game, directory)
+            # get reddit comments
+            if validate_reddit(): 
+                scrape_reddit(game, directory)
             # # get twitter comments (VERY LIMITED -> FIND FIX)
             # if validate_twitter(): 
             #     scrape_twitter(game, directory)
-            # # get youtube comments (LIMITED -> FIND FIX)
+            # # get youtube comments
             if validate_youtube():
                 scrape_youtube(game, directory)
             # # get steam comments
-            # scrape_steam(game, directory, steamID)
+            scrape_steam(game, directory, steamID)
             # # # get metacritic comments
-            # scrape_metacritic(game, directory)
-        print()
+            scrape_metacritic(game, directory)
+        time.sleep(5)  # Avoid rate limits 
 
 def main():
-    load_dotenv() # load keys
     run_scraper() # run scrapper
     
 if __name__ == "__main__":
