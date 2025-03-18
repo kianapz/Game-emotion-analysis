@@ -16,6 +16,7 @@ load_dotenv() # load Connection String
 
 # Construct MongoDB URI dynamically
 MONGO_URI = f"mongodb+srv://{os.getenv('MONGO_CREDENTIALS')}"
+MONGO_DBNAME = os.getenv("MONGO_DBNAME")
 
 # Check if the URI is valid before connecting
 if not os.getenv('MONGO_CREDENTIALS'):
@@ -31,8 +32,8 @@ else:
 
 # Create a new client and connect to the server
 client = MongoClient(MONGO_URI, server_api=ServerApi('1'))
-db = client["gameReviews"]
-collection = db["reviews"]
+db = client[MONGO_DBNAME]
+collection = db["game"]
 data = list(collection.find())
 # Convert to JSON and save to file
 # Custom JSON encoder to handle ObjectId

@@ -14,3 +14,4 @@ pymongo
 langdetect
 flair
 bson
+textblob
