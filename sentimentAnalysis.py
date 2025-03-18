@@ -122,7 +122,7 @@ i = 0
                         
                         
 #                         date = pd.to_datetime(row["Comment Date"], errors="coerce").to_pydatetime()
-#                         data = {"platform": file.split("_")[0],"game_title": file.split("_")[-1].split('.')[0] ,"review": row["Comment"], "inserion_data":date, "released_date" : release_date, "tag": sentence.tag,"score":sentence.score}
+#                         data = {"platform": file.split("_")[0],"game_title": file.split("_")[-1].split('.')[0] ,"review": row["Comment"], "insertion_data":date, "released_date" : release_date, "tag": sentence.tag,"score":sentence.score}
 #                         collection.insert_one(data)
 #                         #print(data)
 #                         result.append(data)
@@ -137,7 +137,7 @@ i = 0
 #                         tagger.predict(sentence)
                         
 #                         date = pd.to_datetime(row["Date"], errors="coerce").to_pydatetime()
-#                         data = {"platform": file.split("_")[0],"game_title": file.split("_")[-1].split('.')[0] ,"review": row["Review"], "inserion_data":date, "released_date" : release_date, "tag": sentence.tag,"score":sentence.score}
+#                         data = {"platform": file.split("_")[0],"game_title": file.split("_")[-1].split('.')[0] ,"review": row["Review"], "insertion_data":date, "released_date" : release_date, "tag": sentence.tag,"score":sentence.score}
 #                         result.append(data)
 #                         collection.insert_one(data)
 
@@ -153,7 +153,7 @@ i = 0
 #                         tagger.predict(sentence)
 
 #                         date = pd.to_datetime(row["Date"], errors="coerce").to_pydatetime()
-#                         data = {"platform": file.split("_")[0],"game_title": file.split("_")[-1].split('.')[0] ,"review": row["Comment"], "inserion_data":date, "released_date" : release_date, "tag": sentence.tag,"score":sentence.score}
+#                         data = {"platform": file.split("_")[0],"game_title": file.split("_")[-1].split('.')[0] ,"review": row["Comment"], "insertion_data":date, "released_date" : release_date, "tag": sentence.tag,"score":sentence.score}
 #                         result.append(data)
 #                         collection.insert_one(data)
 
