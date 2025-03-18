@@ -48,7 +48,11 @@ To keep your keys secure, we use a `.env` file.
 
    # YouTube API
    YOUTUBE_API_KEY=your_youtube_api_key
+
+   # MongoDB Connection
+   MONGO_ConnectionString=your_username:your_password@your_cluster.mongodb.net/?retryWrites=true&w=majority
    ```
+
 
 3. **Save the **``** file** and you're good to go!
 
