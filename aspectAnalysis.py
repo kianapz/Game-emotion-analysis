@@ -49,14 +49,6 @@ ASPECTS = {
     "engagement": ["replayability", "replay value", "longevity", "endgame", "post game", "replay options", "multiple endings", "progression", "game duration", "content depth"]
 }
 
-# def normalize_text(text):
-#     """
-#     Normalize text by replacing different spellings with a "standard" name.
-#     """
-#     for standard_aspect, variations in ASPECTS.items():
-#         for variation in variations:
-#             text = text.replace(variation, standard_aspect)  # Replace variations with the standard term
-#     return text
 def normalize_text(text):
     """
     Normalize text by replacing different spellings with a 'standard' name.
@@ -148,40 +140,12 @@ def save_statistics():
     """
     Save and print the final analysis statistics.
     """
-    print("\n===== FINAL STATISTICS =====")
-
-    # Total reviews processed
-    print(f"Total Reviews Processed: {total_reviews}")
-
-    # Reviews per platform
-    print("\nReviews per Platform:")
-    for platform, count in platform_count.items():
-        print(f"  {platform}: {count} reviews")
-
-    # Most mentioned aspects
-    print("\nMost Mentioned Aspects:")
-    sorted_aspects = sorted(aspect_mention_counts.items(), key=lambda x: x[1], reverse=True)
-    for aspect, count in sorted_aspects:
-        print(f"  {aspect}: {count} mentions")
-
-    # Average sentiment per aspect
-    print("\nAverage Sentiment Per Aspect:")
-    for aspect, counts in aspect_sentiment_counts.items():
-        total = counts["total"]
-        positive_ratio = counts["positive"] / total if total > 0 else 0
-        sentiment_label = "POSITIVE" if positive_ratio > 0.5 else "NEGATIVE"
-        print(f"  {aspect}: {sentiment_label} ({counts['positive']} positive, {counts['negative']} negative)")
-
     # Overall sentiment
     total_positive = overall_sentiment_counts["positive"]
     total_negative = overall_sentiment_counts["negative"]
-    positive_percentage = (total_positive / total_reviews) * 100 if total_reviews > 0 else 0
-    negative_percentage = (total_negative / total_reviews) * 100 if total_reviews > 0 else 0
-
-    print("\nOverall Sentiment:")
-    print(f"  Positive Reviews: {positive_percentage:.2f}%")
-    print(f"  Negative Reviews: {negative_percentage:.2f}%")
-
+    positive_percentage = (total_positive / (total_positive + total_negative)) * 100 if total_reviews > 0 else 0
+    negative_percentage = (total_negative / (total_positive + total_negative)) * 100 if total_reviews > 0 else 0
+    
     # Save statistics to a file
     with open("review_statistics.txt", "w", encoding="utf-8") as f:
         f.write("===== FINAL STATISTICS =====\n")
@@ -192,6 +156,7 @@ def save_statistics():
             f.write(f"  {platform}: {count} reviews\n")
 
         f.write("\nMost Mentioned Aspects:\n")
+        sorted_aspects = sorted(aspect_mention_counts.items(), key=lambda x: x[1], reverse=True)
         for aspect, count in sorted_aspects:
             f.write(f"  {aspect}: {count} mentions\n")
 
@@ -267,4 +232,7 @@ def main():
     save_statistics()
 
 if __name__ == "__main__":
-    main()
+    # main()
+    
+    document_count = collection.count_documents({})
+    print(f"Total documents in 'Game' collection: {document_count}")

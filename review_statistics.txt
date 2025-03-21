@@ -1,0 +1,31 @@
+===== FINAL STATISTICS =====
+Total Reviews Processed: 91629
+
+Reviews per Platform:
+  steam: 4073 reviews
+  youtube: 52649 reviews
+  reddit: 34907 reviews
+
+Most Mentioned Aspects:
+  narrative: 6104 mentions
+  interaction: 3757 mentions
+  challenge: 3132 mentions
+  platform: 2581 mentions
+  visuals: 2561 mentions
+  social: 2189 mentions
+  audio: 1972 mentions
+  performance: 1315 mentions
+  value: 953 mentions
+  engagement: 387 mentions
+
+Average Sentiment Per Aspect:
+  visuals: POSITIVE (1608 positive, 953 negative)
+  interaction: POSITIVE (2212 positive, 1545 negative)
+  audio: POSITIVE (1159 positive, 813 negative)
+  challenge: POSITIVE (1652 positive, 1480 negative)
+  narrative: POSITIVE (3634 positive, 2470 negative)
+  platform: POSITIVE (1292 positive, 1289 negative)
+  performance: NEGATIVE (656 positive, 659 negative)
+  social: POSITIVE (1113 positive, 1076 negative)
+  value: NEGATIVE (410 positive, 543 negative)
+  engagement: POSITIVE (259 positive, 128 negative)
