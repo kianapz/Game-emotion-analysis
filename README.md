@@ -1,6 +1,6 @@
 # 🎮 Game Emotion Analysis 
 
-This project scrapes **Reddit, Twitter, YouTube, Steam, and Metacritic** for comments and reviews about different games.\
+This project scrapes **Reddit, YouTube, Steam, and Metacritic** for comments and reviews about different games.\
 The collected data is used for **sentiment analysis, emotion detection, and trend analysis** before and after a game's release.
 
 ---
