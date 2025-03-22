@@ -108,10 +108,10 @@ def scrape_reddit(genre, game, directory):
                     continue  # Skip 'MoreComments' objects
                 comment_date = datetime.fromtimestamp(comment.created_utc, tz=timezone.utc).strftime('%Y-%m-%d')
                 comment = clean_text(comment.body)
-                data.append(["Reddit", genre, game, comment_date, comment])
+                data.append([genre, game, comment_date, comment])
         # Save to CSV if data exists ( post.score, comment.score)
         if data:
-            df = pd.DataFrame(data, columns=["platform", "genre", "game", "commented_date", "comment"])
+            df = pd.DataFrame(data, columns=["genre", "game", "commented_date", "comment"])
             df.to_csv(f"{directory}/reddit_comments_{game}.csv", index=False)
             print(f"\tReddit {len(data)} data for {game} saved!")
         else:
@@ -303,8 +303,6 @@ def scrape_metacritic(genre, game, directory):
         print(f"\tError scraping Metacritic for {game}: {e}")
         driver.quit()
 
-
-#########################################################
 # Run scrappers for each game
 def run_scraper():
     """Loops through the list of games for each genre, and calls scraping 
