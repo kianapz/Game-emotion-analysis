@@ -67,7 +67,6 @@ def process_reviews_from_csv(csv_file, output_file):
     # Create new columns for each aspect, explicitly setting dtype to 'object' (supports string values)
     for aspect in ASPECTS.keys():
         df[aspect] = "none"  # Initialize all aspect columns with "none"
-    df['overall_sentiment'] = "none"  # Initialize overall sentiment column with "none"
 
     # Analyze each review
     for index, row in df.iterrows():
