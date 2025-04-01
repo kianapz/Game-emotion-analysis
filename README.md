@@ -1,6 +1,6 @@
 # 🎮 Game Emotion Analysis 
 
-This project scrapes **Reddit, Twitter, YouTube, Steam, and Metacritic** for comments and reviews about different games.\
+This project scrapes **Reddit, YouTube, Steam, and Metacritic** for comments and reviews about different games.\
 The collected data is used for **sentiment analysis, emotion detection, and trend analysis** before and after a game's release.
 
 ---
@@ -48,7 +48,11 @@ To keep your keys secure, we use a `.env` file.
 
    # YouTube API
    YOUTUBE_API_KEY=your_youtube_api_key
+
+   # MongoDB Connection
+   MONGO_ConnectionString=your_username:your_password@your_cluster.mongodb.net/?retryWrites=true&w=majority
    ```
+
 
 3. **Save the **``** file** and you're good to go!
 

@@ -8,5 +8,10 @@ nltk
 selenium
 webdriver-manager
 python-dotenv
-typing_extensions==4.5.0
-
+typing_extensions==4.12.2
+pandas
+pymongo
+langdetect
+flair
+bson
+textblob
